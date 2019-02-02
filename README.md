@@ -50,4 +50,14 @@ commit
 save
 exit
 ```
+You can set up CNAMEs for your servers in the port forwarding section like so (where *jenkins.home* is the CNAME):
+```bash
+dns {
+        forwarding {
+            cache-size 4000
+            listen-on eth0
+            listen-on switch0
+            options cname=jenkins.home,soth.home
+        }
+    }
 ```
