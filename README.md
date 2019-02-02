@@ -3,7 +3,7 @@ Notes on Ubiquiti networking equipment (UniFi, EdgeRouter etc.)
 
 ## Enabling dnsmasq for DHCP server
 This enables local DNS hostname resolution.
-https://help.ubnt.com/hc/en-us/articles/115002673188-EdgeRouter-Using-dnsmasq-for-DHCP-Server
+See: https://help.ubnt.com/hc/en-us/articles/115002673188-EdgeRouter-Using-dnsmasq-for-DHCP-Server
 
 Enable dnsmsq:
 ```bash
@@ -43,4 +43,11 @@ Set static host mapping for each local device, you may already have done this if
 ```bash
 set service dhcp-server shared-network-name wired-eth0 subnet 192.168.1.0/24 static-mapping arbus ip-address 192.168.1.177 
 set service dhcp-server shared-network-name wired-eth0 subnet 192.168.1.0/24 static-mapping arbus mac-address 70:85:c2:2b:45:55 
+```
+Then commit and save.
+```bash
+commit
+save
+exit
+```
 ```
